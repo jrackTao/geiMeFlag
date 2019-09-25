@@ -1,0 +1,62 @@
+.index {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+@import "~taro-ui/dist/style/components/toast.scss";
+@import "~taro-ui/dist/style/components/icon.scss";
+
+.avater {
+  width: 180Px;
+  height: 180Px;
+  border: 8Px solid #fee4b6;
+  margin: auto;
+  margin-top: 500px;
+  border-radius: 14Px;
+  background-color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+.btn {
+  width: 200Px;
+  margin-top: 30px;
+  background-color: #f00;
+  font-weight: bold;
+  color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+}
+
+
+canvas {
+  position: relative;
+  z-index: 0;
+}
+
+.toast {
+  z-index: 99;
+}
+
+.new-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
