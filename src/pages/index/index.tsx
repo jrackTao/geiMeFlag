@@ -146,20 +146,22 @@ class Index extends Component {
     const scal = 1.9;
     this.ctx.drawImage(guoqiImg, LENGTH - GQ.width / scal, LENGTH - GQ.height / scal, GQ.width / scal, GQ.height / scal)
     this.ctx.draw()
-    setTimeout(async () => {
-      const img = await canvasToPath('canvas');
-      this.setState({
-        newImage: img,
-        step: 'saveImage'
-      })
-    }, 100);
+    this.setState({
+      step: 'saveImage'
+    })
+
+    // setTimeout(async () => {
+    //   const img = await canvasToPath('canvas');
+   
+    // }, 200);
 
   }
 
   // 长按保存事件
   onSaveImage = async () => {
     // 获取用户是否开启用户授权相册
-    const { newImage } = this.state;
+    // const { newImage } = this.state;
+    const newImage = await canvasToPath('canvas');
     const res = await getSetting();
     if (!res.authSetting['scope.writePhotosAlbum']) {
       await auth();
